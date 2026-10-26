@@ -13,6 +13,21 @@ npm run dev        # http://localhost:3000
 npm run build && npm start
 ```
 
+## Live site (GitHub Pages)
+
+**https://dakshu007.github.io/aswego_website-/**
+
+GitHub Pages serves the `gh-pages` branch. To redeploy after changes:
+
+```bash
+npm run build:pages          # static export → out/ (base path /aswego_website-, WebP images)
+cd out && git init -b gh-pages && git add -A && git commit -m "Deploy" \
+  && git push -f https://github.com/dakshu007/aswego_website-.git gh-pages
+```
+
+When you move to your own domain, set `NEXT_PUBLIC_SITE_URL` to it and drop `NEXT_PUBLIC_BASE_PATH`
+in the `build:pages` script (or deploy the default build to Vercel).
+
 ## What's on the page
 
 | Section | Notes |
