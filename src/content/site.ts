@@ -32,6 +32,15 @@ export const site = {
   brandRed: "#fe0000",
 } as const;
 
+/** Path prefix when hosted in a sub-folder (GitHub Pages project site), e.g. "/aswego_website-". */
+export const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
+/** Absolute URL for a site path ("/llms.txt" → "https://…/llms.txt"), keeping any sub-folder. */
+export const absUrl = (path: string) => `${site.url.replace(/\/$/, "")}${path}`;
+
+/** Site-relative path of a static asset, without the sub-folder prefix Next adds. */
+export const assetPath = (src: string) => (basePath && src.startsWith(basePath) ? src.slice(basePath.length) : src);
+
 export const seo = {
   metaTitle: "As We Go — Motorsport & Moto Photographer in Kerala",
   metaDescription:

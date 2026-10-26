@@ -1,7 +1,6 @@
-import { faqs, seo, services, site } from "@/content/site";
+import { absUrl as abs, assetPath, faqs, seo, services, site } from "@/content/site";
 import { hero, photos } from "@/content/photos";
 
-const abs = (path: string) => new URL(path, site.url).toString();
 
 /** Structured data graph: who we are, what we offer, the gallery and the FAQ. */
 export function JsonLd() {
@@ -13,7 +12,7 @@ export function JsonLd() {
   const imageObject = (p: typeof hero) => ({
     "@type": "ImageObject",
     "@id": abs(`/#photo-${p.id}`),
-    contentUrl: abs(p.src.src),
+    contentUrl: abs(assetPath(p.src.src)),
     url: abs(`/#photo-${p.id}`),
     width: p.src.width,
     height: p.src.height,

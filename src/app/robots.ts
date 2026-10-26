@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
-import { site } from "@/content/site";
+import { absUrl } from "@/content/site";
+
+export const dynamic = "force-static";
 
 /**
  * Open to search and AI crawlers alike — the goal is to be cited in Google AI Overviews,
@@ -37,7 +39,6 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "*", allow: "/" },
       { userAgent: aiAgents, allow: "/" },
     ],
-    sitemap: `${site.url}/sitemap.xml`,
-    host: site.url,
+    sitemap: absUrl("/sitemap.xml"),
   };
 }

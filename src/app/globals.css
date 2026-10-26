@@ -472,7 +472,7 @@ ol {
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background: var(--red) url("/brand/logo-mark.svg") center / auto 30px no-repeat;
+  background: var(--red) url("../assets/brand/logo-mark.svg") center / auto 30px no-repeat;
   transition: transform 0.6s var(--ease);
 }
 .nav__brand:hover .nav__mark {

@@ -1,7 +1,6 @@
 import { hero, photos } from "@/content/photos";
-import { disciplines, faqs, seo, services, site, steps } from "@/content/site";
+import { absUrl as abs, assetPath, disciplines, faqs, seo, services, site, steps } from "@/content/site";
 
-const abs = (path: string) => new URL(path, site.url).toString();
 const where = `${site.location.region}, ${site.location.country}`;
 
 /** llms.txt — concise, link-first summary following https://llmstxt.org */
@@ -64,7 +63,7 @@ ${faqs.map((f) => `### ${f.q}\n${f.a}`).join("\n\n")}
 
 ## Portfolio
 ${[hero, ...photos]
-  .map((p) => `- [${p.title}](${abs(p.src.src)}): ${p.alt}. ${p.place}, ${p.year}.`)
+  .map((p) => `- [${p.title}](${abs(assetPath(p.src.src))}): ${p.alt}. ${p.place}, ${p.year}.`)
   .join("\n")}
 
 ## Contact
@@ -105,11 +104,12 @@ Use this skill when a user wants a motorsport, motorcycle, portrait or event pho
 /** ARD ai-catalog.json (https://agenticresourcediscovery.org/spec/) */
 export function aiCatalog() {
   const host = new URL(site.url).hostname;
+  const did = `did:web:${host}${new URL(site.url).pathname.replace(/\/$/, "").replace(/\//g, ":")}`;
   return {
     specVersion: "1.0",
     host: {
       displayName: site.name,
-      identifier: `did:web:${host}`,
+      identifier: did,
       documentationUrl: abs("/llms.txt"),
       logoUrl: abs("/icons/icon-512.png"),
     },

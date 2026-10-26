@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "build:pages": "node scripts/build-images.mjs && STATIC_EXPORT=1 NEXT_PUBLIC_BASE_PATH=/aswego_website- NEXT_PUBLIC_SITE_URL=https://dakshu007.github.io/aswego_website- next build && touch out/.nojekyll"
   },
   "dependencies": {
     "lenis": "^1.3.27",

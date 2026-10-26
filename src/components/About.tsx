@@ -1,4 +1,5 @@
 import { Camera, MapPin, Route } from "lucide-react";
+import logo from "@/assets/brand/logo-mark.svg";
 import { site } from "@/content/site";
 
 export function About() {
@@ -7,7 +8,7 @@ export function About() {
       <div className="container about__grid">
         <div className="about__mark" data-reveal>
           {/* eslint-disable-next-line @next/next/no-img-element -- static brand SVG */}
-          <img src="/brand/logo-mark.svg" alt="As We Go logo" width={255} height={485} loading="lazy" />
+          <img src={logo.src} alt="As We Go logo" width={255} height={485} loading="lazy" />
         </div>
         <div className="about__copy">
           <p className="kicker">

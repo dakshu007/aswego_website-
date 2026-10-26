@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Instrument_Sans } from "next/font/google";
 import localFont from "next/font/local";
 import { JsonLd } from "@/components/JsonLd";
-import { seo, site } from "@/content/site";
+import { absUrl, basePath, seo, site } from "@/content/site";
 import "./globals.css";
 
 const sans = Instrument_Sans({
@@ -40,23 +40,23 @@ export const metadata: Metadata = {
   publisher: site.name,
   category: "Photography",
   alternates: {
-    canonical: "/",
-    types: { "text/plain": [{ url: "/llms.txt", title: "llms.txt" }] },
+    canonical: absUrl("/"),
+    types: { "text/plain": [{ url: absUrl("/llms.txt"), title: "llms.txt" }] },
   },
   openGraph: {
     type: "website",
-    url: "/",
+    url: absUrl("/"),
     siteName: site.name,
     title: seo.metaTitle,
     description: seo.metaDescription,
     locale: site.locale,
-    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: `${site.name} — ${site.tagline}` }],
+    images: [{ url: absUrl("/og.jpg"), width: 1200, height: 630, alt: `${site.name} — ${site.tagline}` }],
   },
   twitter: {
     card: "summary_large_image",
     title: seo.metaTitle,
     description: seo.metaDescription,
-    images: ["/og.jpg"],
+    images: [absUrl("/og.jpg")],
   },
   robots: {
     index: true,
@@ -89,7 +89,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <script
           dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }}
         />
-        <link rel="ai-catalog" href="/.well-known/ai-catalog.json" type="application/json" />
+        <link rel="ai-catalog" href={`${basePath}/.well-known/ai-catalog.json`} type="application/json" />
         <JsonLd />
       </head>
       <body>

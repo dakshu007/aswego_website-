@@ -1,5 +1,5 @@
 import { ArrowUp } from "lucide-react";
-import { nav, site } from "@/content/site";
+import { basePath, nav, site } from "@/content/site";
 import { InstagramIcon } from "./icons";
 
 export function Footer() {
@@ -38,7 +38,7 @@ export function Footer() {
             © {new Date().getFullYear()} {site.name}. All photographs are the property of {site.name}.
           </small>
           <small>
-            <a href="/llms.txt">llms.txt</a> · {site.location.region}, {site.location.country}
+            <a href={`${basePath}/llms.txt`}>llms.txt</a> · {site.location.region}, {site.location.country}
           </small>
           <a className="footer__top-btn" href="#top">
             Back to top <ArrowUp size={16} aria-hidden="true" />
