@@ -1,0 +1,25 @@
+# As We Go
+
+> As We Go (@as.we.go__) is a motorsport photographer in Kerala. The studio shoots motocross, supercross, motorcycle launches, rider portraits, events and brand campaigns across Kerala, South India, India. Tagline: "Every ride writes a story."
+
+Key facts:
+- Based in: Kerala, India
+- Shoots: Motocross, Supercross, Machines, Portraits, Events & Brands
+- Delivers: edited photographs and short-form reels for Instagram, web and print
+- Booking: Instagram DM to @as.we.go__
+
+## Main pages
+- [Home — As We Go — Motorsport & Moto Photographer in Kerala](https://dakshu007.github.io/aswego_website-/): Portfolio, services, FAQ and booking form
+- [Selected work](https://dakshu007.github.io/aswego_website-/#work): Motocross, supercross, machines, portraits and events
+- [Chapters](https://dakshu007.github.io/aswego_website-/#chapters): The five disciplines As We Go covers
+- [About](https://dakshu007.github.io/aswego_website-/#about): Who As We Go is and how the studio works
+- [FAQ](https://dakshu007.github.io/aswego_website-/#faq): Answers about services, location and booking
+- [Book a shoot](https://dakshu007.github.io/aswego_website-/#contact): Booking form and contact links
+
+## Contact
+- [Instagram @as.we.go__](https://www.instagram.com/as.we.go__/): Portfolio feed and primary booking channel
+- [Direct message](https://ig.me/m/as.we.go__): Start a booking conversation
+
+## Optional
+- [Full site content for LLMs](https://dakshu007.github.io/aswego_website-/llms-full.txt): Every service, FAQ answer and photo description in one file
+- [Agent catalog](https://dakshu007.github.io/aswego_website-/.well-known/ai-catalog.json): ARD catalog for AI agents

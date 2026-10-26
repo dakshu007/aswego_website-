@@ -1,0 +1,29 @@
+User-Agent: *
+Allow: /
+
+User-Agent: Google-Extended
+User-Agent: GoogleOther
+User-Agent: Gemini-Deep-Research
+User-Agent: GPTBot
+User-Agent: OAI-SearchBot
+User-Agent: ChatGPT-User
+User-Agent: ClaudeBot
+User-Agent: Claude-SearchBot
+User-Agent: Claude-User
+User-Agent: anthropic-ai
+User-Agent: PerplexityBot
+User-Agent: Perplexity-User
+User-Agent: DeepSeekBot
+User-Agent: Applebot
+User-Agent: Applebot-Extended
+User-Agent: Bingbot
+User-Agent: DuckAssistBot
+User-Agent: meta-externalagent
+User-Agent: MistralAI-User
+User-Agent: cohere-ai
+User-Agent: YouBot
+User-Agent: Amazonbot
+User-Agent: CCBot
+Allow: /
+
+Sitemap: https://dakshu007.github.io/aswego_website-/sitemap.xml

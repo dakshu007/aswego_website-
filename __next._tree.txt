@@ -1,0 +1,5 @@
+:HL["/aswego_website-/_next/static/chunks/1xanvmmwvs_d_.css","style"]
+:HL["/aswego_website-/_next/static/media/4cf231d25563e07b-s.p.2874ccu1_u7jf.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/aswego_website-/_next/static/media/unbounded_700_caps-s.p.1vev6kumk78ll.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+1:[["children",{"s":"__PAGE__","h":128}]]
+0:{"b":"jMnI1wrwEowPolLYDpqLC","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
